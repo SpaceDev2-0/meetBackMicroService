@@ -1,0 +1,20 @@
+version: "2.7"
+
+services:
+  client:
+    build: C:\Users\Skander\Desktop\ProjetMicroserviceAll\meet\client
+    ports:
+      - "3000:3002"
+    image: "client"
+
+    command: npm start
+  
+  server:
+    build: C:\Users\Skander\Desktop\ProjetMicroserviceAll\meet\server
+    ports:
+      - "3008:3008"
+    image: "server"
+    volumes:
+      - C:\Users\Skander\Desktop\ProjetMicroserviceAll\meet\server
+      - C:\Users\Skander\Desktop\ProjetMicroserviceAll\meet\server\node_modules
+    command: npm start
